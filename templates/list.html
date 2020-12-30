@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../static/css/tasks.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task List</title>
+</head>
+<body>
+<div class="center-column">
+
+	<form method="POST">
+        <input type="text" id="title" name="title" placeholder="Add new task..." value="{{ request.form.title }}">
+        <input class="btn btn-info btn-cursor" onclick="trySubmit(this.form)" value="Create Task">
+	</form>
+
+	<div class="todo-list">
+
+	{% for task in tasks %}
+		<div class="item-row">
+			<a class="btn btn-sm btn-info" href="/update_task/{{ task.id }}">Update</a>
+			<a class="btn btn-sm btn-danger" href="/delete_task/{{ task.id }}">Delete</a>
+
+            {% if task.complete == True %}
+            <strike>{{task.title}}</strike>
+            {% else %}
+            <span>{{task.title}}</span>
+            {% endif %}
+		</div>
+	{% endfor %}
+	</div>
+</div>
+<script>
+    const trySubmit = (form) => {
+        if (document.getElementById('title').value !== '') {
+            form.submit()
+        } else {
+            alert("Please fill out the title \n for your task")
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,209 @@
+body {
+    background: #222d32;
+    font-family: "Roboto", sans-serif;
+}
+.center {
+    text-align: center;
+}
+.login-box {
+    text-align: left;
+    height: 100vh;
+}
+.login-title {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    color: white;
+}
+.description {
+    letter-spacing: 1px;
+    color: white;
+    font-size: 13px;
+}
+.registerOverlay:hover {
+    text-decoration: none;
+    color: mediumslateblue;
+}
+.eye-btn {
+    position: relative;
+    color: white;
+    z-index: 2;
+    top: -45px;
+    left: 94%;
+}
+.info-btn {
+    position: relative;
+    color: red;
+    z-index: 2;
+    top: -47px;
+    left: 78%;
+}
+input:focus {
+    outline: none;
+    box-shadow: 0 0 0;
+}
+.form-control-label {
+    font-size: 13px;
+    color: #6c6c6c;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    background: #222d32;
+    border: none;
+    border-bottom: 2px solid white;
+    border-top: 0;
+    border-radius: 0;
+    font-weight: bold;
+    outline: 0;
+    margin-bottom: 20px;
+    padding-left: 0;
+    color: #ecf0f5;
+}
+.form-control:focus {
+    border-color: inherit;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-bottom: 2px solid #0db8de;
+    outline: 0;
+    background-color: #222d32;
+    color: #ecf0f5;
+}
+.btn-outline-primary {
+    border-color: white;
+    color: white;
+    border-radius: 0;
+    font-weight: bold;
+    letter-spacing: 1px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .12),
+        0 1px 2px rgba(0, 0, 0, .24);
+}
+.btn-outline-primary:hover {
+    background-color: white;
+    right: 0;
+}
+
+/*input[type="text"] {
+    border-bottom: 2px solid red;
+}*/
+
+.modal-content {
+    background-color: #003e51;
+    /*color: #faf3eb;*/
+}
+
+.register-title {
+    color: #faf3eb;
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+#register-eye {
+    position: relative;
+    color: white;
+    z-index: 2;
+    top: -47px;
+    left: 93%;
+}
+.register-form-control[type="text"],
+.register-form-control[type="email"],
+.register-form-control[type="password"] {
+    background: #003e51;
+    border: none;
+    border-bottom: 2px solid white;
+    border-top: 0;
+    border-radius: 0;
+    font-weight: bold;
+    outline: 0;
+    margin-bottom: 20px;
+    padding-left: 0;
+    color: #ecf0f5;
+}
+.register-form-control:focus {
+    border-color: inherit;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-bottom: 2px solid #0db8de;
+    outline: 0;
+    background-color: #003e51;
+    color: #ecf0f5;
+}
+
+
+
+.top {
+    padding: 5px;
+    background-color: lightgrey;
+    height: 120px;
+    position: relative;
+    width: 30%;
+    top: 80px;
+    left: 60%;
+}
+.triangle {
+    border-left: calc(4vw - 2px) solid transparent;
+    border-right: calc(4vw - 2px) solid transparent;
+    border-top: 8px solid lightgrey;
+    content: "";
+    display: block;
+    height: 0;
+    left: 60px;
+    margin: auto;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    width: 0;
+}
+
+#myModal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+
+
+@media (min-width: 1200px) {
+    .login-box {
+        width: 655px;
+        display: block;
+        margin: 0 auto;
+    }
+    .test {
+        width: 655px;
+    }
+    .eye-btn {
+        left: 97%;
+    }
+    .info-btn {
+        left: 89%;
+    }
+    .top {
+        height: 130px;
+        width: 25%;
+        top: 90px;
+        left: 71%;
+    }
+    .triangle {
+        border-left: calc(1vw - 2px) solid transparent;
+        border-right: calc(1vw - 2px) solid transparent;
+        left: 89px;
+    }
+    #register-eye {
+        left: 96%;
+    }
+}
